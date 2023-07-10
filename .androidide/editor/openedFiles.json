@@ -1,0 +1,65 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/VivoTools/app/src/main/java/com/itos/vivotools/SActivity.java",
+      "selection": {
+        "end": {
+          "column": 15,
+          "index": -1,
+          "line": 30
+        },
+        "start": {
+          "column": 15,
+          "index": -1,
+          "line": 30
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/VivoTools/app/src/main/java/com/itos/vivotools/MainActivity.java",
+      "selection": {
+        "end": {
+          "column": 5,
+          "index": -1,
+          "line": 181
+        },
+        "start": {
+          "column": 4,
+          "index": -1,
+          "line": 165
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/VivoTools/app/src/main/res/layout/activity_s.xml",
+      "selection": {
+        "end": {
+          "column": 4,
+          "index": -1,
+          "line": 58
+        },
+        "start": {
+          "column": 4,
+          "index": -1,
+          "line": 58
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/VivoTools/app/build.gradle",
+      "selection": {
+        "end": {
+          "column": 23,
+          "index": -1,
+          "line": 13
+        },
+        "start": {
+          "column": 23,
+          "index": -1,
+          "line": 13
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/VivoTools/app/build.gradle"
+}

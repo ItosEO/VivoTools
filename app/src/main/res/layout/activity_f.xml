@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="18sp"
+        android:lines="3"
+        android:id="@+id/ft"
+        />
+
+
+    <Button
+        android:id="@+id/fbutton1"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="1.2-快速充电"
+        android:onClick="install_12"
+        />
+
+    <Button
+        android:id="@+id/fbutton2"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="1.6-快速耐久"
+        android:onClick="install_16"
+        />
+    <Button
+        android:id="@+id/fbutton3"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="1.7-极速充电"
+        android:onClick="install_17"
+        />
+    <Button
+        android:id="@+id/fbutton4"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="1.8-均衡版本"
+        android:onClick="install_18"
+        />
+    <Button
+        android:id="@+id/fbutton5"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="2.1-极致触控"
+        android:onClick="install_21"
+        />
+
+    <Button
+        android:id="@+id/fbutton6"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="17sp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:text="打开满血充电界面"
+        android:onClick="open_fuelsummary"
+        />
+
+
+</LinearLayout>
