@@ -21,8 +21,8 @@ android {
         applicationId "com.itos.vivotools"
         minSdk 24
         targetSdk 33
-        versionCode 46
-        versionName "1.2-Alpha"
+        versionCode 50
+        versionName "1.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

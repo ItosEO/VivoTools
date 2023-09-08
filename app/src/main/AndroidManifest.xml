@@ -13,21 +13,20 @@
         <activity
             android:name=".FActivity"
             android:excludeFromRecents="true"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:excludeFromRecents="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".SActivity"
             android:excludeFromRecents="true"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <provider
             android:name="rikka.shizuku.ShizukuProvider"

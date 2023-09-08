@@ -191,10 +191,12 @@ public class FActivity extends Activity {
                                             Toast.makeText(FActivity.this, "降级完成,当前为1.7,充电最快但不支持满血充电", Toast.LENGTH_SHORT).show();
                                     case "18.apk" ->
                                             Toast.makeText(FActivity.this, "降级完成,当前为1.8,此版本对电池健康不错", Toast.LENGTH_SHORT).show();
-                                    case "21.apk" ->
-                                            Toast.makeText(FActivity.this, "降级完成,当前为2.1.0.0,搭配30033 GW以获取极致触控", Toast.LENGTH_SHORT).show();
+                                    case "23.apk" ->
+                                            Toast.makeText(FActivity.this, "降级完成,当前为2.3.0.0,搭配30033 GW以获取极致触控", Toast.LENGTH_SHORT).show();
+                                    case "20.apk" ->
+                                            Toast.makeText(FActivity.this, "降级完成,当前为2.0.0.0,触控和充电速度都不错", Toast.LENGTH_SHORT).show();
                                     default ->
-                                            Toast.makeText(FActivity.this, "降级完成,当前为" + filename + ",充电速度快,但x系列和neo7不支持满血充电", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(FActivity.this, "降级完成,当前为" + filename, Toast.LENGTH_SHORT).show();
                                 }
                                 String g_version = MainActivity.getAppVersion(context, "com.vivo.fuelsummary");
                                 if (g_version != null) {
@@ -307,8 +309,12 @@ public class FActivity extends Activity {
         install_apk("18.apk");
     }
 
-    public synchronized void install_21(View view) {
-        install_apk("21.apk");
+    public synchronized void install_23(View view) {
+        install_apk("23.apk");
+    }
+
+    public synchronized void install_20(View view) {
+        install_apk("20.apk");
     }
 
     public void open_fuelsummary(View view) {

@@ -74,11 +74,22 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="15sp"
-        android:text="30059-温控激进"
-        android:onClick="install_30059"
+        android:text="30061-线程放置优化"
+        android:onClick="install_30061"
         />
     <Button
         android:id="@+id/sbutton7"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="30062-FAS调度思路"
+        android:onClick="install_30062"
+        />
+
+    <Button
+        android:id="@+id/sbutton8"
         style="@android:style/Widget.Material.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

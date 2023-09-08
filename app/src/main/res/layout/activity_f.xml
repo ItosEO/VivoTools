@@ -59,14 +59,24 @@
         android:onClick="install_18"
         />
     <Button
+        android:id="@+id/fbutton7"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="2.0-主打均衡"
+        android:onClick="install_20"
+        />
+    <Button
         android:id="@+id/fbutton5"
         style="@android:style/Widget.Material.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="15sp"
-        android:text="2.1-极致触控"
-        android:onClick="install_21"
+        android:text="2.3-极致触控"
+        android:onClick="install_23"
         />
 
     <Button
