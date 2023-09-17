@@ -157,6 +157,8 @@ public class SActivity extends Activity {
                                             Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.46,享受积极的调度吧", Toast.LENGTH_SHORT).show();
                                     case "30056.apk" ->
                                             Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.56,享受丝滑的触控吧", Toast.LENGTH_SHORT).show();
+                                    case "30057.apk" ->
+                                            Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.57,提取自海外版,部分游戏效果好,值得一试", Toast.LENGTH_SHORT).show();
                                     case "30058.apk" ->
                                             Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.58,享受稳定的帧率吧", Toast.LENGTH_SHORT).show();
                                     case "30061.apk" ->
@@ -216,7 +218,6 @@ public class SActivity extends Activity {
     }
 
 
-
     public synchronized void install_30046(View view) {
         install_apk("30046.apk");
     }
@@ -225,6 +226,9 @@ public class SActivity extends Activity {
         install_apk("30056.apk");
     }
 
+    public synchronized void install_30057(View view) {
+        install_apk("30057.apk");
+    }
     public synchronized void install_30058(View view) {
         install_apk("30058.apk");
     }

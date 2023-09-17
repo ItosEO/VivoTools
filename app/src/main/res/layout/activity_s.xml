@@ -58,6 +58,16 @@
         android:onClick="install_30056"
         />
     <Button
+        android:id="@+id/sbutton9"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="30057-海外特供"
+        android:onClick="install_30057"
+        />
+    <Button
         android:id="@+id/sbutton5"
         style="@android:style/Widget.Material.Button.Borderless.Colored"
         android:layout_width="match_parent"
