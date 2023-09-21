@@ -1,29 +1,49 @@
 name: Android CI
+
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+
 jobs:
   build:
-    permissions: write-all
+
     runs-on: ubuntu-latest
+
+    env:
+      RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+      RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: set up JDK 17
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-      - name: Build with Gradle
-        run: ./gradlew assembleRelease
-      - name: Upload to Release Action
-        uses: Shopify/upload-to-release@v1.0.1
+
+      - name: Build APK
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleRelease
+
+      - name: Sign APK with Keystore
+        run: |
+          # 恢复密钥库
+          echo "${{ secrets.RELEASE_KEYSTORE_FILE }}" | base64 -d > keystore.jks
+          # 使用 jarsigner 签名 APK，引用环境变量中的密码和别名密码
+          #jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore keystore.jks -storepass $RELEASE_KEYSTORE_PASSWORD -keypass $RELEASE_KEY_PASSWORD -signedjar app/build/outputs/apk/release/app-release-signed.apk app/build/outputs/apk/release/app-release-unsigned.apk 
+
+      - name: Zipalign APK
+        run: |
+          # 使用 zipalign 优化 APK，生成最终的签名 APK
+          #zipalign -v 4 app/build/outputs/apk/release/*.apk app/build/outputs/apk/release/app-release-aligned.apk
+
+      - name: Upload Signed APK
+        uses: actions/upload-artifact@v3
         with:
-          name: app-${{ github.event.release.tag_name }}.apk
-          path: app/build/outputs/apk/release/app-release-unsigned.apk
-          repo-token: ${{ github.token }}
-          content-type: application/zip
+          name: releaseApk
+          path: app/build/outputs/apk/release/*.apk
