@@ -30,6 +30,8 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            shrinkResources false
+            versionNameSuffix getCommitId()
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -37,13 +39,30 @@ android {
         sourceCompatibility JavaVersion.VERSION_15
         targetCompatibility JavaVersion.VERSION_15
     }
+    applicationVariants.all { variant ->
+        // 遍历所有的变体
+        variant.outputs.all {
+            // 获取应用的版本名
+            def versionName = variant.versionName
+            // 设置输出文件名
+            outputFileName = "VivoTools_v${versionName}.apk"
+        }
+    }
 }
-
+def getCommitId() {
+    try {
+        def command = "git rev-parse --short HEAD".execute()
+        command.waitFor()
+        return "_" + command.text.trim()
+    } catch (Exception e) {
+        return "unknown"
+    }
+}
 dependencies {
 
     implementation 'dev.rikka.shizuku:api:13.1.0'
     implementation 'dev.rikka.shizuku:provider:13.1.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.4.+'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0-alpha03'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
