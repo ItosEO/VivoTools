@@ -48,6 +48,7 @@ android {
             outputFileName = "VivoTools_v${versionName}.apk"
         }
     }
+
 }
 def getCommitId() {
     try {
