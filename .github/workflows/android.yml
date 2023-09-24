@@ -58,4 +58,4 @@ jobs:
           files: |
             app/build/outputs/apk/release/VivoTools_v*.apk
           tag_name: "v${{ steps.get_version.outputs.tag_name }}"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
