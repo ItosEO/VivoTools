@@ -3,26 +3,18 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        itos {
-            storeFile file('D:\\Desktop\\py\\itos.jks')
-            keyAlias 'itos'
-            storePassword 'mqlong520'
-            keyPassword 'mqlong520'
-        }
-    }
     buildFeatures {
         // Enables Jetpack Compose for this module
         compose true
     }
     namespace 'com.itos.vivotools'
-    compileSdk 33
+    compileSdk 34
     defaultConfig {
         applicationId "com.itos.vivotools"
         minSdk 24
-        targetSdk 33
-        versionCode 50
-        versionName "1.5"
+        targetSdk 34
+        versionCode 51
+        versionName "1.8"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,7 +23,6 @@ android {
         release {
             minifyEnabled false
             shrinkResources false
-            versionNameSuffix getCommitId()
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -39,31 +30,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_15
         targetCompatibility JavaVersion.VERSION_15
     }
-    applicationVariants.all { variant ->
-        // 遍历所有的变体
-        variant.outputs.all {
-            // 获取应用的版本名
-            def versionName = variant.versionName
-            // 设置输出文件名
-            outputFileName = "VivoTools_v${versionName}.apk"
-        }
-    }
+
 
 }
-def getCommitId() {
-    try {
-        def command = "git rev-parse --short HEAD".execute()
-        command.waitFor()
-        return "_" + command.text.trim()
-    } catch (Exception e) {
-        return "unknown"
-    }
-}
+
 dependencies {
-
     implementation 'dev.rikka.shizuku:api:13.1.0'
     implementation 'dev.rikka.shizuku:provider:13.1.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.11.0-alpha03'
+    implementation 'com.google.android.material:material:1.11.0-beta01'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }

@@ -80,7 +80,8 @@ public class SActivity extends Activity {
         //限定一下横屏时的窗口宽度,让其不铺满屏幕。否则太丑
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
             getWindow().getAttributes().width = (getWindowManager().getDefaultDisplay().getHeight());
-
+        getWindow().setBackgroundDrawableResource(R.drawable.dialog_rounded_corners);
+        
         stextView = findViewById(R.id.st);
         String g_version = MainActivity.getAppVersion(context, "com.vivo.gamewatch");
         if (g_version != null) {
@@ -148,25 +149,25 @@ public class SActivity extends Activity {
                             public void run() {
                                 switch (filename) {
                                     case "GW_KPL.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为KPL专版,享受狂暴的调度吧,KPL版本推荐搭配游戏优化使用", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为KPL专版,享受狂暴的调度吧,KPL版本推荐搭配游戏优化使用", Toast.LENGTH_SHORT).show();
                                     case "20123.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为2.0.1.23,老机型狂喜", Toast.LENGTH_SHORT).show();
-                                    case "30033.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.33,享受经典的调度和触控吧", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为2.0.1.23,老机型狂喜", Toast.LENGTH_SHORT).show();
                                     case "30046.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.46,享受积极的调度吧", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为3.0.0.46,享受积极的调度吧", Toast.LENGTH_SHORT).show();
                                     case "30056.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.56,享受丝滑的触控吧", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为3.0.0.56,享受丝滑的触控吧", Toast.LENGTH_SHORT).show();
                                     case "30057.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.57,提取自海外版,部分游戏效果好,值得一试", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为3.0.0.57,提取自海外版,部分游戏效果好,值得一试", Toast.LENGTH_SHORT).show();
                                     case "30058.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.58,享受稳定的帧率吧", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为3.0.0.58,享受稳定的帧率吧", Toast.LENGTH_SHORT).show();
                                     case "30061.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.61,享受优化后的线程放置吧(主要王者原神)", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为3.0.0.61,享受优化后的线程放置吧(主要王者原神)", Toast.LENGTH_SHORT).show();
                                     case "30062.apk" ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为3.0.0.62,享受最新的调度思路吧", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为3.0.0.62,享受最新的调度思路吧", Toast.LENGTH_SHORT).show();
+                                    case "30064.apk" ->
+                                            Toast.makeText(SActivity.this, "安装完成,当前为3.0.0.64,享受丝滑流畅的日用体验吧", Toast.LENGTH_SHORT).show();
                                     default ->
-                                            Toast.makeText(SActivity.this, "降级完成,当前为" + filename, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SActivity.this, "安装完成,当前为" + filename, Toast.LENGTH_SHORT).show();
                                 }
                                 String g_version = MainActivity.getAppVersion(context, "com.vivo.gamewatch");
                                 //String g_version = MainActivity.getAppVersion(context, "com.example.myapplication1");
@@ -213,8 +214,8 @@ public class SActivity extends Activity {
         install_apk("20123.apk");
     }
 
-    public synchronized void install_30033(View view) {
-        install_apk("30033.apk");
+    public synchronized void install_30064(View view) {
+        install_apk("30064.apk");
     }
 
 

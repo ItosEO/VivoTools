@@ -126,6 +126,8 @@ public class MainActivity extends Activity {
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title_bar);
         // 设置自定义标题布局
 
+        getWindow().setBackgroundDrawableResource(R.drawable.dialog_rounded_corners);
+
         Log.d("onCreate：", "yes");
         Shizuku.addRequestPermissionResultListener(REQUEST_PERMISSION_RESULT_LISTENER);
 

@@ -27,16 +27,6 @@
         />
 
     <Button
-        android:id="@+id/sbutton2"
-        style="@android:style/Widget.Material.Button.Borderless.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="15sp"
-        android:text="30033-跟随经典"
-        android:onClick="install_30033"
-        />
-    <Button
         android:id="@+id/sbutton3"
         style="@android:style/Widget.Material.Button.Borderless.Colored"
         android:layout_width="match_parent"
@@ -99,13 +89,23 @@
         />
 
     <Button
+        android:id="@+id/sbutton_2"
+        style="@android:style/Widget.Material.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="30064-日用丝滑"
+        android:onClick="install_30064"
+        />
+    <Button
         android:id="@+id/sbutton8"
         style="@android:style/Widget.Material.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="15sp"
-        android:text="KPL赛事版-释放性能"
+        android:text="KPL赛事版-极致性能"
         android:onClick="install_KPL"
         />
     

@@ -63,6 +63,8 @@ public class FActivity extends Activity {
         // 限定一下横屏时的窗口宽度,让其不铺满屏幕。否则太丑
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
             getWindow().getAttributes().width = (getWindowManager().getDefaultDisplay().getHeight());
+        getWindow().setBackgroundDrawableResource(R.drawable.dialog_rounded_corners);
+
         String g_version = MainActivity.getAppVersion(context, "com.vivo.fuelsummary");
         // String g_version = com.itos.vivotools.MainActivity.getAppVersion(context,"com.itos.vivotools");
 
